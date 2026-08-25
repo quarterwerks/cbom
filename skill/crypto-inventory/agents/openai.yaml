@@ -1,0 +1,4 @@
+interface:
+  display_name: "Crypto Inventory"
+  short_description: "Inventory cryptography across repository projects"
+  default_prompt: "Use $crypto-inventory to scan this repository and generate a JSON inventory of cryptographic libraries, protocols, and algorithms."

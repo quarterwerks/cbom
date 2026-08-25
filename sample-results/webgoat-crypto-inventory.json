@@ -1,0 +1,2933 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-25T00:42:16Z",
+  "repository": "WebGoat/WebGoat",
+  "scan": {
+    "files_considered": 1240,
+    "max_file_bytes": 2000000,
+    "skipped_directories": [
+      ".git",
+      ".gradle",
+      ".hg",
+      ".idea",
+      ".next",
+      ".svn",
+      ".terraform",
+      ".tox",
+      ".venv",
+      "Pods",
+      "__pycache__",
+      "build",
+      "coverage",
+      "dist",
+      "env",
+      "node_modules",
+      "out",
+      "target",
+      "vendor",
+      "venv"
+    ]
+  },
+  "projects": [
+    {
+      "path": ".",
+      "languages": [
+        "java",
+        "js",
+        "yaml",
+        "yml"
+      ],
+      "manifests": [
+        "pom.xml"
+      ],
+      "crypto": {
+        "libraries": [
+          {
+            "name": "JCA/JCE",
+            "evidence": [
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/cryptography/CryptoUtil.java",
+                "line": 17,
+                "source": "source",
+                "match": "java.security.Signature"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/cryptography/HashingAssignment.java",
+                "line": 11,
+                "source": "source",
+                "match": "java.security.MessageDigest"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/missingac/DisplayUser.java",
+                "line": 8,
+                "source": "source",
+                "match": "java.security.MessageDigest"
+              }
+            ],
+            "confidence": "medium"
+          },
+          {
+            "name": "PyCryptodome",
+            "evidence": [
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/WebSecurityConfig.java",
+                "line": 20,
+                "source": "source",
+                "match": "crypto."
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/container/WebSecurityConfig.java",
+                "line": 20,
+                "source": "source",
+                "match": "crypto."
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/container/users/AdminController.java",
+                "line": 156,
+                "source": "source",
+                "match": "crypto."
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/container/users/UserService.java",
+                "line": 91,
+                "source": "source",
+                "match": "crypto."
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/cryptography/Cryptography.java",
+                "line": 20,
+                "source": "source",
+                "match": "crypto."
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/spoofcookie/encoders/EncDec.java",
+                "line": 10,
+                "source": "source",
+                "match": "crypto."
+              }
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "protocols": [
+          {
+            "name": "HTTPS",
+            "evidence": [
+              {
+                "file": ".pre-commit-config.yaml",
+                "line": 11,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": ".pre-commit-config.yaml",
+                "line": 18,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": ".pre-commit-config.yaml",
+                "line": 23,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "pom.xml",
+                "line": 2,
+                "source": "dependency_manifest",
+                "match": "https://"
+              },
+              {
+                "file": "pom.xml",
+                "line": 18,
+                "source": "dependency_manifest",
+                "match": "https://"
+              },
+              {
+                "file": "pom.xml",
+                "line": 22,
+                "source": "dependency_manifest",
+                "match": "https://"
+              },
+              {
+                "file": "pom.xml",
+                "line": 27,
+                "source": "dependency_manifest",
+                "match": "https://"
+              },
+              {
+                "file": "pom.xml",
+                "line": 36,
+                "source": "dependency_manifest",
+                "match": "https://"
+              },
+              {
+                "file": "pom.xml",
+                "line": 55,
+                "source": "dependency_manifest",
+                "match": "https://"
+              },
+              {
+                "file": "pom.xml",
+                "line": 60,
+                "source": "dependency_manifest",
+                "match": "https://"
+              },
+              {
+                "file": "pom.xml",
+                "line": 129,
+                "source": "dependency_manifest",
+                "match": "https://"
+              },
+              {
+                "file": "pom.xml",
+                "line": 164,
+                "source": "dependency_manifest",
+                "match": "https://"
+              },
+              {
+                "file": "pom.xml",
+                "line": 343,
+                "source": "dependency_manifest",
+                "match": "https://"
+              },
+              {
+                "file": "pom.xml",
+                "line": 451,
+                "source": "dependency_manifest",
+                "match": "https://"
+              },
+              {
+                "file": "pom.xml",
+                "line": 460,
+                "source": "dependency_manifest",
+                "match": "https://"
+              },
+              {
+                "file": ".mvn/wrapper/MavenWrapperDownloader.java",
+                "line": 27,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": ".github/FUNDING.yml",
+                "line": 1,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": ".github/workflows/release.yml",
+                "line": 48,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": ".github/workflows/release.yml",
+                "line": 50,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask1Test.java",
+                "line": 18,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask1Test.java",
+                "line": 21,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask1Test.java",
+                "line": 26,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask1Test.java",
+                "line": 37,
+                "source": "source",
+                "match": "https"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectMitigationCheckTest.java",
+                "line": 18,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectMitigationCheckTest.java",
+                "line": 28,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask4Test.java",
+                "line": 18,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask4Test.java",
+                "line": 27,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectLessonMetadataTest.java",
+                "line": 41,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectLessonMetadataTest.java",
+                "line": 43,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask2Test.java",
+                "line": 18,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask2Test.java",
+                "line": 26,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask2Test.java",
+                "line": 34,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask3Test.java",
+                "line": 18,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask3Test.java",
+                "line": 27,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask3Test.java",
+                "line": 35,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/OpenRedirectIntegrationTest.java",
+                "line": 26,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/OpenRedirectIntegrationTest.java",
+                "line": 31,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/OpenRedirectIntegrationTest.java",
+                "line": 36,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/OpenRedirectIntegrationTest.java",
+                "line": 42,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/OpenRedirectIntegrationTest.java",
+                "line": 80,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/XSSIntegrationTest.java",
+                "line": 85,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/playwright/webgoat/lessons/OpenRedirectLessonUITest.java",
+                "line": 38,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/playwright/webgoat/lessons/OpenRedirectLessonUITest.java",
+                "line": 43,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/playwright/webgoat/lessons/OpenRedirectLessonUITest.java",
+                "line": 48,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/playwright/webgoat/lessons/OpenRedirectLessonUITest.java",
+                "line": 53,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/playwright/webgoat/lessons/OpenRedirectLessonUITest.java",
+                "line": 61,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+                "line": 3,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+                "line": 5,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+                "line": 2309,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+                "line": 3589,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+                "line": 3675,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+                "line": 3683,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+                "line": 3713,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+                "line": 3940,
+                "source": "source",
+                "match": "https"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+                "line": 3945,
+                "source": "source",
+                "match": "https"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+                "line": 4102,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+                "line": 4984,
+                "source": "source",
+                "match": "https"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+                "line": 5054,
+                "source": "source",
+                "match": "https"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+                "line": 5771,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+                "line": 6229,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+                "line": 8304,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+                "line": 8920,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+                "line": 9439,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/modernizr.min.js",
+                "line": 2,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/modernizr.min.js",
+                "line": 3,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/jquery_form/jquery.form.js",
+                "line": 7,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/jquery_form/jquery.form.js",
+                "line": 9,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/jquery_form/jquery.form.js",
+                "line": 125,
+                "source": "source",
+                "match": "https"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/jquery_form/jquery.form.js",
+                "line": 226,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/libs/jquery-ui-1.10.4.js",
+                "line": 4786,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/libs/jquery-ui-1.10.4.js",
+                "line": 5206,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/libs/jquery-ui-1.10.4.js",
+                "line": 5752,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/libs/jquery-ui-1.10.4.js",
+                "line": 9806,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/libs/underscore-min.js",
+                "line": 3,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/libs/require.min.js",
+                "line": 3,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/libs/bootstrap.min.js",
+                "line": 4,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/libs/jquery.form.js",
+                "line": 7,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/libs/jquery.form.js",
+                "line": 9,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/libs/jquery.form.js",
+                "line": 125,
+                "source": "source",
+                "match": "https"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/libs/jquery.form.js",
+                "line": 226,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/lessons/challenges/js/bootstrap.min.js",
+                "line": 4,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/resources/lessons/openredirect/js/openredirect-task4.js",
+                "line": 19,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/FileServer.java",
+                "line": 89,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/server/StartWebGoat.java",
+                "line": 44,
+                "source": "source",
+                "match": "https"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/container/asciidoc/UsernameMacro.java",
+                "line": 34,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/container/asciidoc/WebGoatTmpDirMacro.java",
+                "line": 28,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/container/asciidoc/OperatingSystemMacro.java",
+                "line": 28,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/container/asciidoc/WebGoatVersionMacro.java",
+                "line": 28,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/securepasswords/SecurePasswordsAssignment.java",
+                "line": 68,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/xss/mitigation/CrossSiteScriptingLesson3.java",
+                "line": 51,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask4.java",
+                "line": 31,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask4.java",
+                "line": 32,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask4.java",
+                "line": 33,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask4.java",
+                "line": 52,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectMitigationCheck.java",
+                "line": 37,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectMitigationCheck.java",
+                "line": 41,
+                "source": "source",
+                "match": "https"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask2.java",
+                "line": 40,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask2.java",
+                "line": 41,
+                "source": "source",
+                "match": "https"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask3.java",
+                "line": 44,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask1.java",
+                "line": 36,
+                "source": "source",
+                "match": "https://"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectTask1.java",
+                "line": 37,
+                "source": "source",
+                "match": "https"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/vulnerablecomponents/VulnerableComponentsLesson.java",
+                "line": 50,
+                "source": "source",
+                "match": "https://"
+              }
+            ],
+            "confidence": "high"
+          },
+          {
+            "name": "JOSE",
+            "evidence": [
+              {
+                "file": "pom.xml",
+                "line": 164,
+                "source": "dependency_manifest",
+                "match": "jwt"
+              },
+              {
+                "file": "pom.xml",
+                "line": 167,
+                "source": "dependency_manifest",
+                "match": "jwt"
+              },
+              {
+                "file": "pom.xml",
+                "line": 343,
+                "source": "dependency_manifest",
+                "match": "jwt"
+              },
+              {
+                "file": "pom.xml",
+                "line": 346,
+                "source": "dependency_manifest",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/webwolf/jwt/JWTTokenTest.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/webwolf/jwt/JWTTokenTest.java",
+                "line": 16,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/webwolf/jwt/JWTTokenTest.java",
+                "line": 17,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/webwolf/jwt/JWTTokenTest.java",
+                "line": 24,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/webwolf/jwt/JWTTokenTest.java",
+                "line": 34,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/webwolf/jwt/JWTTokenTest.java",
+                "line": 94,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/webwolf/jwt/JWTTokenTest.java",
+                "line": 95,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/webwolf/jwt/JWTTokenTest.java",
+                "line": 96,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/webwolf/jwt/JWTTokenTest.java",
+                "line": 97,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/webwolf/jwt/JWTTokenTest.java",
+                "line": 98,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/webwolf/jwt/JWTTokenTest.java",
+                "line": 99,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/webwolf/jwt/JWTTokenTest.java",
+                "line": 114,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/webwolf/jwt/JWTTokenTest.java",
+                "line": 115,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/webwolf/jwt/JWTTokenTest.java",
+                "line": 116,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/webwolf/jwt/JWTTokenTest.java",
+                "line": 117,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/webwolf/jwt/JWTTokenTest.java",
+                "line": 118,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/webwolf/jwt/JWTTokenTest.java",
+                "line": 119,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTDecodeEndpointTest.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTDecodeEndpointTest.java",
+                "line": 28,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTDecodeEndpointTest.java",
+                "line": 37,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTDecodeEndpointTest.java",
+                "line": 38,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+                "line": 10,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+                "line": 49,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+                "line": 67,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+                "line": 78,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+                "line": 81,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+                "line": 88,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+                "line": 99,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+                "line": 109,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+                "line": 121,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+                "line": 129,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+                "line": 140,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+                "line": 153,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+                "line": 162,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+                "line": 172,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+                "line": 176,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+                "line": 198,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+                "line": 216,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpointTest.java",
+                "line": 234,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 8,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 43,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 61,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 73,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 90,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 95,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 104,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 107,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 116,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 120,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 131,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 142,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 155,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 168,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 183,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 196,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 212,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 224,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 234,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 241,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpointTest.java",
+                "line": 248,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpointTest.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpointTest.java",
+                "line": 9,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpointTest.java",
+                "line": 55,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpointTest.java",
+                "line": 66,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpointTest.java",
+                "line": 78,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpointTest.java",
+                "line": 82,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpointTest.java",
+                "line": 91,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpointTest.java",
+                "line": 97,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpointTest.java",
+                "line": 106,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpointTest.java",
+                "line": 109,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpointTest.java",
+                "line": 118,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpointTest.java",
+                "line": 121,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/TokenTest.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/TokenTest.java",
+                "line": 9,
+                "source": "source",
+                "match": "Jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/TokenTest.java",
+                "line": 37,
+                "source": "source",
+                "match": "Jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/TokenTest.java",
+                "line": 38,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpointTest.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpointTest.java",
+                "line": 62,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpointTest.java",
+                "line": 73,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpointTest.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpointTest.java",
+                "line": 47,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpointTest.java",
+                "line": 56,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpointTest.java",
+                "line": 60,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpointTest.java",
+                "line": 67,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpointTest.java",
+                "line": 72,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/JWTLessonIntegrationTest.java",
+                "line": 34,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/JWTLessonIntegrationTest.java",
+                "line": 40,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/JWTLessonIntegrationTest.java",
+                "line": 56,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/JWTLessonIntegrationTest.java",
+                "line": 92,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/JWTLessonIntegrationTest.java",
+                "line": 93,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/JWTLessonIntegrationTest.java",
+                "line": 108,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/JWTLessonIntegrationTest.java",
+                "line": 122,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/JWTLessonIntegrationTest.java",
+                "line": 136,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/JWTLessonIntegrationTest.java",
+                "line": 169,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/JWTLessonIntegrationTest.java",
+                "line": 210,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/JWTLessonIntegrationTest.java",
+                "line": 243,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/JWTLessonIntegrationTest.java",
+                "line": 292,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/JWTLessonIntegrationTest.java",
+                "line": 305,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/LabelAndHintIntegrationTest.java",
+                "line": 121,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/playwright/webwolf/JwtUITest.java",
+                "line": 11,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/playwright/webwolf/JwtUITest.java",
+                "line": 21,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/playwright/webwolf/JwtUITest.java",
+                "line": 30,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/playwright/webwolf/JwtUITest.java",
+                "line": 33,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/playwright/webwolf/JwtUITest.java",
+                "line": 35,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/playwright/webwolf/JwtUITest.java",
+                "line": 37,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/playwright/webwolf/JwtUITest.java",
+                "line": 53,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/playwright/webwolf/JwtUITest.java",
+                "line": 54,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/playwright/webwolf/JwtUITest.java",
+                "line": 55,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/playwright/webwolf/JwtUITest.java",
+                "line": 56,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/playwright/webwolf/JwtUITest.java",
+                "line": 57,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/playwright/webwolf/JwtUITest.java",
+                "line": 58,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/playwright/webwolf/JwtUITest.java",
+                "line": 61,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/resources/webwolf/static/js/jwt.js",
+                "line": 64,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/goatApp/view/PaginationControlView.js",
+                "line": 88,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/resources/lessons/jwt/js/jwt-voting.js",
+                "line": 8,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/resources/lessons/jwt/js/jwt-voting.js",
+                "line": 43,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/resources/lessons/jwt/js/jwt-voting.js",
+                "line": 79,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/resources/lessons/jwt/js/jwt-jku.js",
+                "line": 4,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/resources/lessons/jwt/js/jwt-refresh.js",
+                "line": 8,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/resources/lessons/jwt/js/jwt-refresh.js",
+                "line": 34,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/resources/lessons/jwt/js/jwt-kid.js",
+                "line": 4,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/resources/lessons/jwt/js/jwt-weak-keys.js",
+                "line": 3,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTController.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTController.java",
+                "line": 20,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTController.java",
+                "line": 21,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTController.java",
+                "line": 22,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTController.java",
+                "line": 26,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTController.java",
+                "line": 30,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTController.java",
+                "line": 33,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTController.java",
+                "line": 37,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 23,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 24,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 25,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 26,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 50,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 51,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 54,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 55,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 96,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 97,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 98,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 102,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 107,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 108,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 110,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 119,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 120,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 121,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 139,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 141,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 144,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 149,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 157,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 164,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 168,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 169,
+                "source": "source",
+                "match": "jws"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/webwolf/jwt/JWTToken.java",
+                "line": 189,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 16,
+                "source": "source",
+                "match": "Jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 32,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 33,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 48,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 49,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 50,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 51,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 52,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 109,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 132,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 141,
+                "source": "source",
+                "match": "Jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 142,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 167,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 177,
+                "source": "source",
+                "match": "Jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 178,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 192,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 197,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 200,
+                "source": "source",
+                "match": "Jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 201,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 204,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+                "line": 210,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+                "line": 14,
+                "source": "source",
+                "match": "Jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+                "line": 38,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+                "line": 39,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+                "line": 40,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+                "line": 41,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+                "line": 50,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+                "line": 83,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+                "line": 91,
+                "source": "source",
+                "match": "Jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+                "line": 92,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+                "line": 95,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+                "line": 96,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+                "line": 100,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+                "line": 104,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+                "line": 108,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+                "line": 120,
+                "source": "source",
+                "match": "Jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTRefreshEndpoint.java",
+                "line": 122,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTQuiz.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTQuiz.java",
+                "line": 24,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTQuiz.java",
+                "line": 50,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpoint.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpoint.java",
+                "line": 11,
+                "source": "source",
+                "match": "Jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpoint.java",
+                "line": 31,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpoint.java",
+                "line": 43,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpoint.java",
+                "line": 59,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpoint.java",
+                "line": 63,
+                "source": "source",
+                "match": "Jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpoint.java",
+                "line": 64,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpoint.java",
+                "line": 66,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpoint.java",
+                "line": 73,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpoint.java",
+                "line": 77,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWT.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWT.java",
+                "line": 12,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWT.java",
+                "line": 21,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTDecodeEndpoint.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTDecodeEndpoint.java",
+                "line": 20,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTDecodeEndpoint.java",
+                "line": 22,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/votes/Vote.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/votes/Views.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpoint.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpoint.java",
+                "line": 26,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpoint.java",
+                "line": 27,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpoint.java",
+                "line": 28,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpoint.java",
+                "line": 32,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpoint.java",
+                "line": 33,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpoint.java",
+                "line": 34,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpoint.java",
+                "line": 35,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpoint.java",
+                "line": 36,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpoint.java",
+                "line": 40,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpoint.java",
+                "line": 49,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpoint.java",
+                "line": 52,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpoint.java",
+                "line": 55,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpoint.java",
+                "line": 60,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpoint.java",
+                "line": 64,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpoint.java",
+                "line": 69,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpoint.java",
+                "line": 72,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpoint.java",
+                "line": 5,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpoint.java",
+                "line": 26,
+                "source": "source",
+                "match": "Jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpoint.java",
+                "line": 34,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpoint.java",
+                "line": 35,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpoint.java",
+                "line": 36,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpoint.java",
+                "line": 37,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpoint.java",
+                "line": 38,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpoint.java",
+                "line": 39,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpoint.java",
+                "line": 48,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpoint.java",
+                "line": 57,
+                "source": "source",
+                "match": "JWT"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpoint.java",
+                "line": 60,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpoint.java",
+                "line": 64,
+                "source": "source",
+                "match": "Jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpoint.java",
+                "line": 90,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpoint.java",
+                "line": 93,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpoint.java",
+                "line": 98,
+                "source": "source",
+                "match": "jwt"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderKIDEndpoint.java",
+                "line": 101,
+                "source": "source",
+                "match": "jwt"
+              }
+            ],
+            "confidence": "high"
+          },
+          {
+            "name": "OAuth 2.0",
+            "evidence": [
+              {
+                "file": "pom.xml",
+                "line": 301,
+                "source": "dependency_manifest",
+                "match": "oauth2"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/container/plugins/LessonTest.java",
+                "line": 25,
+                "source": "source",
+                "match": "oauth2"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/container/UserInterceptor.java",
+                "line": 41,
+                "source": "source",
+                "match": "oauth2"
+              }
+            ],
+            "confidence": "high"
+          },
+          {
+            "name": "TLS",
+            "evidence": [
+              {
+                "file": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+                "line": 5416,
+                "source": "source",
+                "match": "ssl"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/jquery_form/jquery.form.js",
+                "line": 467,
+                "source": "source",
+                "match": "ssl"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/jquery_form/jquery.form.js",
+                "line": 481,
+                "source": "source",
+                "match": "ssl"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/jquery_form/jquery.form.js",
+                "line": 489,
+                "source": "source",
+                "match": "ssl"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/libs/jquery.form.js",
+                "line": 467,
+                "source": "source",
+                "match": "ssl"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/libs/jquery.form.js",
+                "line": 481,
+                "source": "source",
+                "match": "ssl"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/libs/jquery.form.js",
+                "line": 489,
+                "source": "source",
+                "match": "ssl"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/server/StartWebGoat.java",
+                "line": 41,
+                "source": "source",
+                "match": "ssl"
+              }
+            ],
+            "confidence": "medium"
+          }
+        ],
+        "algorithms": [
+          {
+            "name": "Diffie-Hellman",
+            "evidence": [
+              {
+                "file": "src/main/resources/webgoat/static/js/libs/jquery-ui-1.10.4.js",
+                "line": 2771,
+                "source": "source",
+                "match": "dh"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/libs/jquery-ui-1.10.4.js",
+                "line": 2793,
+                "source": "source",
+                "match": "dh"
+              },
+              {
+                "file": "src/main/resources/webgoat/static/js/libs/jquery-ui-1.10.4.js",
+                "line": 2796,
+                "source": "source",
+                "match": "dh"
+              }
+            ],
+            "confidence": "medium"
+          },
+          {
+            "name": "MD5",
+            "evidence": [
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5Test.java",
+                "line": 18,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5Test.java",
+                "line": 21,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/CryptoIntegrationTest.java",
+                "line": 89,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/CryptoIntegrationTest.java",
+                "line": 107,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/cryptography/HashingAssignment.java",
+                "line": 30,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/cryptography/HashingAssignment.java",
+                "line": 39,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 14,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 15,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 20,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 26,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 30,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 37,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 42,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 53,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 96,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 98,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 103,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 104,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 105,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 109,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 111,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 112,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 116,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 117,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 118,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 122,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 124,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 130,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 134,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 136,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 140,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 142,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 143,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 148,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 152,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 154,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 158,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 160,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 174,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 176,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 177,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 190,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 193,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 198,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 199,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 200,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 204,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 207,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 208,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 212,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 213,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 214,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 218,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 220,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 227,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 228,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 229,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 233,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 235,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 237,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 242,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 243,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 244,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 248,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 271,
+                "source": "source",
+                "match": "md5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 399,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 486,
+                "source": "source",
+                "match": "MD5"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/PasswordResetLink.java",
+                "line": 20,
+                "source": "source",
+                "match": "MD5"
+              }
+            ],
+            "confidence": "medium"
+          },
+          {
+            "name": "RSA",
+            "evidence": [
+              {
+                "file": "pom.xml",
+                "line": 161,
+                "source": "dependency_manifest",
+                "match": "rsa"
+              },
+              {
+                "file": "pom.xml",
+                "line": 341,
+                "source": "dependency_manifest",
+                "match": "rsa"
+              },
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpointTest.java",
+                "line": 51,
+                "source": "source",
+                "match": "RSA"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/JWTLessonIntegrationTest.java",
+                "line": 252,
+                "source": "source",
+                "match": "RSA"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/cryptography/CryptoUtil.java",
+                "line": 39,
+                "source": "source",
+                "match": "RSA"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/cryptography/CryptoUtil.java",
+                "line": 144,
+                "source": "source",
+                "match": "RSA"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge7/MD5.java",
+                "line": 22,
+                "source": "source",
+                "match": "RSA"
+              }
+            ],
+            "confidence": "high"
+          },
+          {
+            "name": "SHA-2",
+            "evidence": [
+              {
+                "file": "src/test/java/org/owasp/webgoat/lessons/pathtraversal/ProfileUploadRetrievalTest.java",
+                "line": 59,
+                "source": "source",
+                "match": "SHA-512"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/CryptoIntegrationTest.java",
+                "line": 99,
+                "source": "source",
+                "match": "sha256"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/CryptoIntegrationTest.java",
+                "line": 110,
+                "source": "source",
+                "match": "SHA-256"
+              },
+              {
+                "file": "src/it/java/org/owasp/webgoat/integration/PathTraversalIntegrationTest.java",
+                "line": 114,
+                "source": "source",
+                "match": "SHA-512"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/cryptography/HashingAssignment.java",
+                "line": 49,
+                "source": "source",
+                "match": "sha256"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/cryptography/HashingAssignment.java",
+                "line": 53,
+                "source": "source",
+                "match": "sha256"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/cryptography/HashingAssignment.java",
+                "line": 54,
+                "source": "source",
+                "match": "sha256"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/cryptography/HashingAssignment.java",
+                "line": 56,
+                "source": "source",
+                "match": "sha256"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/cryptography/HashingAssignment.java",
+                "line": 57,
+                "source": "source",
+                "match": "sha256"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/cryptography/HashingAssignment.java",
+                "line": 60,
+                "source": "source",
+                "match": "sha256"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/cryptography/SecureDefaultsAssignment.java",
+                "line": 34,
+                "source": "source",
+                "match": "SHA-256"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/missingac/DisplayUser.java",
+                "line": 33,
+                "source": "source",
+                "match": "SHA-256"
+              },
+              {
+                "file": "src/main/java/org/owasp/webgoat/lessons/pathtraversal/ProfileUploadRetrieval.java",
+                "line": 73,
+                "source": "source",
+                "match": "SHA-512"
+              }
+            ],
+            "confidence": "medium"
+          }
+        ]
+      }
+    }
+  ]
+}
